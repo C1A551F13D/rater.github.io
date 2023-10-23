@@ -3,7 +3,7 @@ const rateMovie = async (movieTitleElem, commentElem) => {
 	const comment = commentElem.value;
 
 	if (movieTitle && comment) {
-		const response = await fetch('https://unwelcomeimage-rater.hf.space/api/predict', {
+		const options = {
 			method: 'POST',
 			body: {
 				"data": [
@@ -14,7 +14,8 @@ const rateMovie = async (movieTitleElem, commentElem) => {
 			headers: {
 				'Content-Type': 'application/json'
 			}
-		});
+		};
+		const response = await fetch('https://unwelcomeimage-rater.hf.space/api/predict', options);
 		const json = await response.json().data; //extract JSON from the http response
 		table = document.getElementById('resultsTable');
 		var json2 = json.sort(function (a, b) {

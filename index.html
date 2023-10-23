@@ -19,15 +19,15 @@
 		for the movie.</p>
 	<form>
 		<div class="mb-3">
-			<label for="movieTitle" class="form-label">Movie Name/Title</label>
+			<label for="movieTitleElem" class="form-label">Movie Name/Title</label>
 			<input type="text" name="movieTitle" id="movieTitle" class="form-control">
 		</div>
 		<div class="mb-3">
-			<label for="comment" class="form-label">Commnet</label>
+			<label for="commentElem" class="form-label">Commnet</label>
 			<textarea name="comment" id="comment" rows="10" class="form-control"></textarea>
 		</div>
 		<div class="mb-3">
-			<a class="btn btn-primary" role="button" onclick='rateMovie(movieTitle, comment)'>Rate</a>
+			<a class="btn btn-primary" role="button" onclick='rateMovie(movieTitleElem, commentElem)'>Rate</a>
 		</div>
 	</form>
 
