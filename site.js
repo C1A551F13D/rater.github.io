@@ -3,7 +3,7 @@ const rateMovie = async (movieTitleElem, commentElem) => {
 	const comment = commentElem.value;
 
 	if (movieTitle && comment) {
-		const response = await fetch('https://unwelcomeimage-rater.hf.space/predict', {
+		const response = await fetch('https://unwelcomeimage-rater.hf.space/api/predict', {
 			method: 'POST',
 			body: [
 				movieTitle,
