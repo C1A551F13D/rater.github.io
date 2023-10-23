@@ -16,9 +16,9 @@ const rateMovie = async (movieTitleElem, commentElem) => {
 			}
 		};
 		const response = await fetch('https://unwelcomeimage-rater.hf.space/api/predict', options);
-		const json = await response.json().data; //extract JSON from the http response
+		const json = await response.json(); //extract JSON from the http response
 		table = document.getElementById('resultsTable');
-		var json2 = json.sort(function (a, b) {
+		var json2 = json.data.sort(function (a, b) {
 			return a[0].localeCompare(b[0]);
 		});
 		json2.forEach(movie => {
