@@ -5,12 +5,12 @@ const rateMovie = async (movieTitleElem, commentElem) => {
 	if (movieTitle && comment) {
 		const options = {
 			method: 'POST',
-			body: {
+			body: JSON.stringify({
 				"data": [
 					movieTitle,
 					comment
 				]
-			},
+			}),
 			headers: {
 				'Content-Type': 'application/json'
 			}
